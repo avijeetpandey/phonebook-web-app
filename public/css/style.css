@@ -1,9 +1,16 @@
-footer{
-    position: absolute;
-    bottom:0;
-    width:100%;
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px; //height of the footer
+box-sizing: border-box;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
 #page-content {
     flex: 1 0 auto;
 }
@@ -23,3 +30,20 @@ footer{
     box-shadow: none;
 }
 
+.card1{
+    color:white;
+    background-image: linear-gradient(to right bottom , #6854d2, rgb(0, 40, 114));
+}
+
+.card1:hover{
+    transform: scale(1.02);
+}
+
+.card2{
+    background-image: linear-gradient(to right bottom , red, orange);
+    border:none;
+}
+
+.none{
+    display: none;
+}
