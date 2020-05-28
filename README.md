@@ -26,10 +26,10 @@
 - [x] User can update contacts
 
 ### API endpoints
--[x] **Create new contact :** router.post("/contacts/",createContact);
--[x] **Update contact :** router.put("/contacts/update/:name",updateContact);
--[x] **delete contact :** router.post("/contacts/delete/:name",deleteContact);
--[x] **get contacts :** router.get("/contacts/",getAllContacts);
+- [x] **Create new contact :** router.post("/contacts/",createContact);
+- [x] **Update contact :** router.put("/contacts/update/:name",updateContact);
+- [x] **delete contact :** router.post("/contacts/delete/:name",deleteContact);
+- [x] **get contacts :** router.get("/contacts/",getAllContacts);
 
 
 ## Known issues
