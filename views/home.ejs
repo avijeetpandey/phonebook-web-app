@@ -3,7 +3,7 @@
 <!-- Search Bar -->
 <div class="row justify-content-center m-4">
     <div class="col-12 col-md-10 col-lg-8">
-        <form class="card card-sm">
+        <form class="card card2 card-sm">
             <div class="card-body row no-gutters align-items-center">
                 <div class="col-auto">
                     <i class="fas fa-search h4 text-body"></i>
@@ -22,6 +22,83 @@
     </div>
     <!--end of col-->
 </div>
+
+<!-- Add button for form -->
+<div class="container">
+    <!-- Button to Open the Modal -->
+    <div class="text-center">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Add Contacts
+        </button>
+    </div>
+
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Add New Contact</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/contacts/" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Name" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">DOB:</label>
+                            <input type="date" class="form-control" name="dob" placeholder="Enter DOB" id="dob">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="text" class="form-control" name="phoneNumber" placeholder="Enter Phone Number" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter Email" id="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>
+
+<div class="container">
+    <div class="mx-auto card-columns text-center ">
+    <% contacts.forEach((contact)=>{ %>
+        <div class="card card1 m-2">
+            <div class="card-body">
+                    <p class="card-text"><strong>Name : </strong><%= contact.name %></p>
+                    <p class="card-text"><strong>Phone : </strong><%= contact.phoneNumber %></p>
+                    <p class="card-text"><strong>E-mail : </strong><%= contact.email %></p>
+                    <button href="#" class="btn btn-outline-warning card-link m-2">Edit</button>
+                <form action="/contacts/delete/<%=contact.name%>" method="post">
+                    <input type="text" class="none" name="name" value="<%=contact.name%>" />
+                    <button type="submit"  class="btn btn-outline-danger card-link m-2">Delete</button>
+                </form>
+            </div>
+        </div>
+    <% }); %>
+    </div>
+
 
 
 <%- include('partials/footer') -%>
