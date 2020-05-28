@@ -26,14 +26,8 @@ let contactSchema=new mongoose.Schema({
         required:true,
         unique: true,
     },
-    DOB:{
-        type:Date
-    },
-    image:{
-        data:buffer,
-        contentType:String
-    }
-}, {timestamps:true});
+
+});
 
 
-module.export=mongoose.model('Contact','contactSchema');
+module.exports=mongoose.model('Contact',contactSchema);
