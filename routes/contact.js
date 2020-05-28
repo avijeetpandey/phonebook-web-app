@@ -21,7 +21,7 @@ router.post("/contacts/",createContact);
 router.get("/contacts/",getAllContacts);
 
 // update contacts
-router.put("/contacts/",updateContact);
+router.put("/contacts/update/:name",updateContact);
 
 // delete contacts
 router.post("/contacts/delete/:name",deleteContact);
