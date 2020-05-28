@@ -3,6 +3,10 @@
 ## ScreenShot
 ![Home](screenshots/home.jpg)
 
+Adding new contact
+
+![Add](screenshots/newContact.jpg)
+
 ## Folder structure
 - [x] Controllers :- For managing application execution flow
 - [x] Models :- Contains Database schema of the contacts
